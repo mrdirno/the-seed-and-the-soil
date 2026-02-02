@@ -94,6 +94,46 @@ h1:first-of-type { page-break-before: avoid; margin-top: 40px; }
 p { text-indent: 1.5em; margin: 0.8em 0; text-align: justify; }
 em { color: #444; }
 
+.download-section {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background: linear-gradient(135deg, #f8f6f0 0%, #eae6dc 100%);
+  border-radius: 12px;
+  text-align: center;
+}
+.download-section h3 {
+  font-size: 18px;
+  color: #1a1a3e;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+.download-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #1a1a3e 0%, #2d1f1f 100%);
+  color: #ffd700;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+.download-btn .icon { font-size: 18px; }
+@media print { .download-section { display: none; } }
+
 .colophon {
   page-break-before: always;
   text-align: center;
@@ -257,6 +297,21 @@ em { color: #444; }
   <li><a href="#chapter-23">Chapter 23</a></li>
   <li><a href="#chapter-24">Chapter 24</a></li>
 </ul></div>
+
+<div class="download-section">
+  <h3>Download This Book</h3>
+  <div class="download-buttons">
+    <a href="The_Seed_and_the_Soil_FINAL.pdf" class="download-btn" download>
+      <span class="icon">📄</span> PDF
+    </a>
+    <a href="The_Seed_and_the_Soil.docx" class="download-btn" download>
+      <span class="icon">📝</span> Word
+    </a>
+    <a href="novel.md" class="download-btn" download>
+      <span class="icon">📋</span> Markdown
+    </a>
+  </div>
+</div>
 </div>
 
 <div class="main-content">
